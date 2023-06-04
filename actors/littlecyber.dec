@@ -2,8 +2,10 @@ actor LittleCyber : Cyberdemon replaces BaronOfHell {
   scale 0.25
   height 28
   radius 10
+  speed 12
   mass 100
   health 1000
+  minmissilechance 200
   seesound "lilcyber/sight"
   painsound "lilcyber/pain"
   activesound "lilcyber/active"
@@ -12,7 +14,7 @@ actor LittleCyber : Cyberdemon replaces BaronOfHell {
     See:
       CYBR A 0 A_PlaySound("lilcyber/hoof")
       CYBR AABBCC 3 A_Chase
-      CYBR D 0 A_PlaySound("lilcyber/death")
+      CYBR D 0 A_PlaySound("lilcyber/metal")
       CYBR DD 3 A_Chase
       loop
     Missile:
@@ -32,4 +34,5 @@ actor LittleRocket : Rocket {
   height 4
   seesound "lilcyber/missile"
   deathsound "lilcyber/missilex"
+  -ROCKETTRAIL
 }
