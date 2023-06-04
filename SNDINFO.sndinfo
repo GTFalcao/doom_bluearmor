@@ -14,5 +14,5 @@ bluearmor/attack          DSITEMUP
 bluearmor/death           DSITMBK
 
 bluearmorcore/sight       BCORESIT
-bluearmorcore/active      BCOREACT
 bluearmorcore/pain        DSDMPAIN
+bluearmorcore/active      BCOREACT

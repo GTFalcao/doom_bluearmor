@@ -4,6 +4,7 @@ actor BlueArmorMonster : LostSoul replaces LostSoul {
 	radius 24
   height 32
   scale 1.5
+  speed 6
 	painchance 170
   damage (random(10, 20))
   minmissilechance 300

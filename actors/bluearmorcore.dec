@@ -1,3 +1,33 @@
 actor BlueArmorCore : PainElemental replaces PainElemental {
-  
+  scale 3
+  health 500
+	obituary "%o was no match for the Blue Armor Core."
+  bloodtype "BlueArmorChunkSmall"
+  seesound "bluearmorcore/sight"
+  painsound "bluearmorcore/pain"
+  activesound "bluearmorcore/active"
+  +BRIGHT
+  states {
+    Spawn:
+      ARM2 AB 12 A_Look
+      loop
+    See:
+      ARM2 AABB 3 A_Chase
+      loop
+    Missile:
+      ARM2 ABABABA 2 A_FaceTarget
+      ARM2 B 2 A_PainAttack
+      goto See
+    Pain:
+      ARM2 A 5
+      ARM2 A 5 A_Pain
+      goto See
+    Death:
+      ARM2 ABAB 1
+      ARM2 A 1 A_Scream
+      ARM2 BABABABABABABABABAB 1
+      TNT1 AAAAAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("BlueArmorChunk", random(-15, 15), random(-15, 15), random(0, 40), random(-1, 1) * frandom(5.0, 10.0), random(-1, 1) * frandom(5.0, 10.0), frandom(8.0, 18.0))
+      TNT1 A 1 A_PainDie
+      stop
+  }
 }
