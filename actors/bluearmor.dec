@@ -4,10 +4,16 @@ actor BlueArmorMonster : LostSoul replaces LostSoul {
 	radius 24
   height 32
   scale 1.5
-	painchance 128
+	painchance 170
   damage (random(10, 20))
+  minmissilechance 300
 	obituary "%o was fucked up by a Blue Armor."
   bloodtype "BlueArmorChunkSmall"
+  seesound "bluearmor/sight"
+  painsound "bluearmor/pain"
+  activesound "bluearmor/active"
+  attacksound "bluearmor/attack"
+  deathsound "bluearmor/death"
   renderstyle translucent
   alpha 1
   +BRIGHT

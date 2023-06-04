@@ -6,3 +6,9 @@ lilcyber/missile    LICYBATK
 lilcyber/missilex   LICYBATX
 lilcyber/hoof       LICYBHOF
 lilcyber/metal      LICYBMET
+
+bluearmor/sight     DSGETPOW
+bluearmor/pain      DSDMPAIN
+bluearmor/active    DSDMACT
+bluearmor/attack    DSITEMUP
+bluearmor/death     DSITMBK
