@@ -1,0 +1,39 @@
+actor JohnCena : HellKnight replaces HellKnight
+{
+  health 700
+	scale 0.2
+  speed 12
+	obituary "%o got fucking destroyed by JOHN CENA"
+	meleerange 88
+  seesound "johncena/sight"
+  painchance 0
+  activesound ""
+	states
+	{
+		Spawn:
+			CENA A 10 A_Look
+			loop
+		See:
+      CENA A 80
+      CENA A 0 A_PlaySound("johncena/active", CHAN_VOICE, 1.0, 1)
+			CENA A 2 A_Chase
+			goto See+2
+    Pain:
+      CENA A 2
+      CENA A 2 A_Pain
+      goto See+2
+		Missile:
+			stop
+		Melee:
+      CENA A 0 A_PlaySound("johncena/attack")
+			CENA A 10 A_FaceTarget
+			CENA A 15 A_CustomMeleeAttack(random(30,60),"johncena/hit","johncena/attack")
+			goto See+2
+		Death:
+      CENA A 1
+			CENA A 5 A_PlaySound("none", CHAN_VOICE)
+			CENA AAAAAAAAA 1 A_FadeOut(0.1)
+			CENA A 1 A_Fall
+			stop
+	}
+}

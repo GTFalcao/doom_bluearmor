@@ -16,3 +16,8 @@ bluearmor/death           BARMRDIE
 bluearmorcore/sight       BCORESIT
 bluearmorcore/pain        DSDMPAIN
 bluearmorcore/active      BCOREACT
+
+johncena/sight            CENASIT
+johncena/active           CENALOOP
+johncena/attack           CENAATK
+johncena/hit              CENAHIT
