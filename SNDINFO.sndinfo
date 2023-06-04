@@ -1,14 +1,18 @@
-lilcyber/sight      LICYBSIT
-lilcyber/pain       LICYBPN
-lilcyber/active     LICYBACT
-lilcyber/death      LICYBDTH
-lilcyber/missile    LICYBATK
-lilcyber/missilex   LICYBATX
-lilcyber/hoof       LICYBHOF
-lilcyber/metal      LICYBMET
+lilcyber/sight            LICYBSIT
+lilcyber/pain             LICYBPN
+lilcyber/active           LICYBACT
+lilcyber/death            LICYBDTH
+lilcyber/missile          LICYBATK
+lilcyber/missilex         LICYBATX
+lilcyber/hoof             LICYBHOF
+lilcyber/metal            LICYBMET
 
-bluearmor/sight     DSGETPOW
-bluearmor/pain      DSDMPAIN
-bluearmor/active    DSDMACT
-bluearmor/attack    DSITEMUP
-bluearmor/death     DSITMBK
+bluearmor/sight           DSGETPOW
+bluearmor/pain            DSDMPAIN
+bluearmor/active          DSDMACT
+bluearmor/attack          DSITEMUP
+bluearmor/death           DSITMBK
+
+bluearmorcore/sight       BCORESIT
+bluearmorcore/active      BCOREACT
+bluearmorcore/pain        DSDMPAIN
