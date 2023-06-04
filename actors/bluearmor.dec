@@ -25,7 +25,7 @@ actor BlueArmorMonster : LostSoul replaces LostSoul {
 			ARM2 AB 12 A_Look
       loop
 		See:
-			ARM2 AABB 3 A_Chase
+			ARM2 AABB 4 A_Chase
 			loop
 		Missile:
 			ARM2 A 10
