@@ -11,7 +11,7 @@ bluearmor/sight           DSGETPOW
 bluearmor/pain            DSDMPAIN
 bluearmor/active          DSDMACT
 bluearmor/attack          DSITEMUP
-bluearmor/death           DSITMBK
+bluearmor/death           BARMRDIE
 
 bluearmorcore/sight       BCORESIT
 bluearmorcore/pain        DSDMPAIN
