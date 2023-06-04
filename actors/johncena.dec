@@ -5,8 +5,8 @@ actor JohnCena : HellKnight replaces HellKnight
   speed 13
 	obituary "%o got fucking destroyed by JOHN CENA"
 	meleerange 88
-  seesound "johncena/sight"
   painchance 0
+  seesound ""
   activesound ""
 	states
 	{
@@ -14,7 +14,7 @@ actor JohnCena : HellKnight replaces HellKnight
 			CENA A 10 A_Look
 			loop
 		See:
-      CENA A 75
+      CENA A 75 A_PlaySound("johncena/sight", CHAN_VOICE)
       CENA A 0 A_PlaySound("johncena/active", CHAN_ITEM, 1.0, 1)
 			CENA A 2 A_Chase
 			goto See+2
