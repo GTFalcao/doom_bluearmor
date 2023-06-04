@@ -3,7 +3,7 @@ actor LittleCyber : Cyberdemon replaces BaronOfHell {
   height 28
   radius 10
   speed 12
-  mass 100
+  mass 200
   health 1000
   minmissilechance 200
   seesound "lilcyber/sight"
