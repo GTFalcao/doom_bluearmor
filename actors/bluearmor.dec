@@ -7,7 +7,7 @@ actor BlueArmorMonster : LostSoul replaces LostSoul {
 	painchance 128
   damage (random(10, 20))
 	obituary "%o was fucked up by a Blue Armor."
-  bloodtype "BlueArmorChunk"
+  bloodtype "BlueArmorChunkSmall"
   +BRIGHT
   -MISSILEMORE
 	states
@@ -34,4 +34,40 @@ actor BlueArmorMonster : LostSoul replaces LostSoul {
 			TNT1 A 1 A_Fall
 			stop
 	}
+}
+
+actor BlueArmorChunk {
+  scale 0.25
+  radius 3
+  height 4
+  bouncetype Doom
+  PROJECTILE
+  -NOGRAVITY
+  -ACTIVATEPCROSS
+  +BRIGHT
+  +CANNOTPUSH
+  +USEBOUNCESTATE
+  +BOUNCEONACTORS
+  states {
+    Spawn:
+      BRMR ABCDEFGH 1
+      loop
+    Bounce.Floor:
+      "----" A 70 A_ChangeFlag("USEBOUNCESTATE", false)
+      "----" A 1 A_FadeOut(0.05)
+      wait
+  }
+}
+
+actor BlueArmorChunkSmall : BlueArmorChunk {
+  scale 0.125
+  radius 2
+  height 2
+  -USEBOUNCESTATE
+  states {
+    Spawn:
+      BRMR ABCDEFGHABCDEFGH 1
+      BRMR ABCDEFGHA 1 A_FadeOut(0.1)
+      stop
+  }
 }
