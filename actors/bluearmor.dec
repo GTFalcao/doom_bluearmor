@@ -1,5 +1,5 @@
 actor BlueArmorMonster : LostSoul replaces LostSoul {
-	health 120
+	health 100
 	mass 100
 	radius 20
   height 28
