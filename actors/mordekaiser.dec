@@ -4,7 +4,7 @@ actor Mordekaiser replaces Cyberdemon
 	height 110
 	radius 40
 	scale .55
-	mass 1000
+	mass 5000
 	health 30000
 	meleerange 150
 	speed 16
@@ -33,16 +33,16 @@ actor Mordekaiser replaces Cyberdemon
 		Spawn:
 			MORD B 0
 			MORD B 0 A_GiveInventory("MordeShield",1)
-			MORD B 0 ACS_Execute(939,0)
-			MORD B 1 ACS_Execute(941,0)
 			goto Idle
 		Idle:
 			MORD B 8 A_Look
 			wait
 		Pain:
 			MORD B 4
-			goto See
+			goto See+2
 		See:
+			MORD B 0 ACS_Execute(939,0)
+			MORD B 0 ACS_Execute(941,0)
 			MORD B 0 A_JumpIfInventory("MordeCounter1",1,2)
 			MORD B 0 A_JumpIfHealthLower(15000,"SetFlag1")
 			MORD B 0 A_JumpIfInventory("MordeCounter2",1,2)
@@ -55,11 +55,11 @@ actor Mordekaiser replaces Cyberdemon
 		SetFlag1:
 			MORD B 0 A_ChangeFlag("MISSILEMORE",1)
 			MORD B 1 A_GiveInventory("MordeCounter1",1)
-			goto See
+			goto See+2
 		SetFlag2:
 			MORD B 0 A_ChangeFlag("MISSILEEVENMORE",1)
 			MORD B 1 A_GiveInventory("MordeCounter2",1)
-			goto See
+			goto See+2
 		Melee:
 			MORD A 0 A_JumpIfInventory("MordeCounter4",1,2)
 			MORD A 0 A_Jump(65 - (health/1000),"SpellW")
@@ -75,7 +75,7 @@ actor Mordekaiser replaces Cyberdemon
 			MORD B 6 A_JumpIfHealthLower(15000,1)
 			MORD B 6 A_JumpIfHealthLower(7500,1)
 			MORD B 8
-			goto See
+			goto See+2
 		Missile:
 			MORD B 0 A_JumpIfInventory("MordeCounter3",1,2)
 			MORD B 0 A_Jump(20 - (health/1500),"SpellR")
@@ -85,10 +85,10 @@ actor Mordekaiser replaces Cyberdemon
 			MORD B 2 A_JumpIfCloser(900,"SpellE")
 			MORD B 0 A_JumpIfInventory("MordeCounter3",1,2)
 			MORD B 2 A_Jump(30 - (health/1000),"SpellR")
-			goto See
+			goto See+2
 		SpellQ:
 			MORD A 2 A_JumpIfHealthLower(100,2)
-			MORD A 2 DamageThing(25)
+			MORD A 2 DamageThing(3)
 			MORD A 0 ACS_ExecuteAlways(944,0,0)
 			MORD A 0 A_JumpIfInventory("MordeCounterVO",1,3)
 			MORD A 0 A_Jump(64,2)
@@ -99,10 +99,10 @@ actor Mordekaiser replaces Cyberdemon
 			MORD B 5 A_JumpIfHealthLower(15000,1)
 			MORD B 5 A_JumpIfHealthLower(7500,1)
 			MORD B 10
-			goto See
+			goto See+2
 		SpellW:
 			MORD B 2 A_JumpIfHealthLower(100,2)
-			MORD B 0 DamageThing(30)
+			MORD B 0 DamageThing(4)
 			MORD B 0 ACS_ExecuteAlways(944,0,1)
 			MORD B 2 A_PlaySound("morde/spellw",1)
 			MORD B 0 A_GiveInventory("MordeCounter4",1)
@@ -128,10 +128,10 @@ actor Mordekaiser replaces Cyberdemon
 			MORD B 0 A_CustomMissile("CreepingDeath1",48,-96,0,2)
 			MORD B 3 A_CustomMissile("CreepingDeath2",48,96,0,2)
 			MORD B 30
-			goto See
+			goto See+2
 		SpellE:
 			MORD B 2 A_JumpIfHealthLower(100,2)
-			MORD B 2 DamageThing(40)
+			MORD B 2 DamageThing(5)
 			MORD B 0 ACS_ExecuteAlways(944,0,2)
 			MORD B 0 A_JumpIfInventory("MordeCounterVO",1,3)
 			MORD B 0 A_Jump(40,2)
@@ -150,13 +150,13 @@ actor Mordekaiser replaces Cyberdemon
 			MORD B 0 A_CustomMissile("SiphonOfDestruction1",0,0,30,2)
 			MORD B 0 A_CustomMissile("SiphonOfDestruction2",56,32,0)
 			MORD B 30 A_CustomMissile("SiphonOfDestruction2",56,0,0)
-			goto See
+			goto See+2
 		SpellR:
 			MORD B 0 ACS_Execute(942,0)
 			MORD B 0 ACS_Execute(943,0)
 			MORD B 0 A_GiveInventory("MordeCounter3",1)
 			MORD B 20 A_PlaySound("morde/rvo",2,1.0,0,ATTN_NONE)
-			goto See
+			goto See+2
 		Death:
 			MORD B 2
 			MORD B 20 A_PlaySound("morde/death",1,1.0,0,ATTN_NONE)
@@ -452,12 +452,12 @@ actor MordeShield : BasicArmorPickup
 	armor.saveamount 750
 	inventory.icon "IRONA0"
 	inventory.pickupmessage "Picked up something heavy, and metal..."
-	scale 0.5
+	scale 0.6
 	states
 	{
 		Spawn:
-			IRON B 30
-			IRON B 8 bright 
+			IRON B 16
+			IRON B 6 bright 
 			loop
 	}
 }
@@ -469,6 +469,7 @@ actor MordeShieldBonus : BasicArmorBonus
 	armor.maxsaveamount 7500
 	inventory.icon "IRONA0"
 	inventory.pickupmessage "Picked up something heavy, and metal..."
+	scale 0.6
 	states
 	{
 		Spawn:
