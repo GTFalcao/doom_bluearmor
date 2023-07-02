@@ -2,3 +2,4 @@
 #include "actors/bluearmorcore.dec"
 #include "actors/johncena.dec"
 #include "actors/littlecyber.dec"
+#include "actors/mordekaiser.dec"
