@@ -1,4 +1,5 @@
 actor LittleCyber : Cyberdemon replaces BaronOfHell {
+  species "LittleCyber"
   scale 0.25
   height 28
   radius 10

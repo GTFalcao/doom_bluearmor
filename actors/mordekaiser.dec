@@ -71,7 +71,7 @@ actor Mordekaiser replaces Cyberdemon
 			MORD A 0 A_Jump(170,2)
 			MORD A 0 A_PlaySound("morde/spellevo",2)
 			MORD A 8 A_PlaySound("morde/meleetry",1)
-			MORD A 12 A_CustomMeleeAttack(random(55,95),"morde/meleehit")
+			MORD A 12 A_CustomMeleeAttack(random(75,110),"morde/meleehit")
 			MORD B 6 A_JumpIfHealthLower(15000,1)
 			MORD B 6 A_JumpIfHealthLower(7500,1)
 			MORD B 8
@@ -186,7 +186,7 @@ actor MaceOfSpades
 			TNT1 A 6
 			stop
 		Death:
-			TNT1 A 1 A_Explode(random(80,130),200)
+			TNT1 A 1 A_Explode(random(90,140),200)
 			TNT1 A 1 A_GiveToTarget("MordeShieldBonus",1)
 			TNT1 A 1 A_GiveToTarget("MordeShieldBonus",1)
 			TNT1 A 1 A_GiveToTarget("MordeShieldBonus",1)
@@ -196,7 +196,7 @@ actor MaceOfSpades
 
 actor CreepingDeath1
 {
-	damage (1)
+	damage (random(2,3))
 	speed 8
 	radius 20
 	height 20
@@ -282,7 +282,7 @@ actor CreepingDeath1
 		Crash:
 		XDeath:
 			IRON C 0 A_GiveToTarget("MordeShieldBonus",1)
-			IRON C 2 A_Explode(random(10,20),80)
+			IRON C 2 A_Explode(random(15,25),80)
 			IRON C 1 A_FadeOut(0.08)
 			wait
 	}
@@ -382,10 +382,10 @@ actor CreepingDeathCounter
 
 actor SiphonOfDestruction1
 {
-	speed 55
+	speed 50
 	radius 12
 	height 64
-	damage (random(13,23))
+	damage (random(13,21))
 	deathsound "morde/spellehit"
 	damagetype "metal"
 	PROJECTILE
