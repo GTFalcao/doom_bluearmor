@@ -1,25 +1,48 @@
 lilcyber/sight            LICYBSIT
+$limit lilcyber/sight 0
 lilcyber/pain             LICYBPN
+$limit lilcyber/pain 0
 lilcyber/active           LICYBACT
+$limit lilcyber/active 0
 lilcyber/death            LICYBDTH
+$limit lilcyber/death 0
 lilcyber/missile          LICYBATK
+$limit lilcyber/missile 0
 lilcyber/missilex         LICYBATX
+$limit lilcyber/missilex 0
 lilcyber/hoof             LICYBHOF
+$limit lilcyber/hoof 0
 lilcyber/metal            LICYBMET
+$limit lilcyber/metal 0
 
 bluearmor/sight           DSGETPOW
+$limit bluearmor/sight 0
 bluearmor/pain            DSDMPAIN
+$limit bluearmor/pain 0
 bluearmor/active          DSDMACT
+$limit bluearmor/active 0
 bluearmor/attack          DSITEMUP
+$limit bluearmor/attack 0
 bluearmor/death           BARMRDIE
+$limit bluearmor/death 0
 
 bluearmorcore/sight       BCORESIT
+$limit bluearmorcore/sight 0
 bluearmorcore/pain        DSDMPAIN
+$limit bluearmorcore/pain 0
 bluearmorcore/active      BCOREACT
+$limit bluearmorcore/active 0
 
 johncena/sight            CENASIT
+$limit johncena/sight 0
 johncena/active           CENALOOP
+$limit johncena/active 0
 johncena/attack           CENAATK
+$limit johncena/attack 0
 johncena/hit              CENAHIT
+$limit johncena/hit 0
 
-chainguy/sight            SURPSIT
+chainguy/sight            SURPRISE
+skeleton/sight            LEEROY
+$limit chainguy/sight 0
+$limit skeleton/sight 0
