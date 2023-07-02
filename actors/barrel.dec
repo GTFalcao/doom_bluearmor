@@ -1,0 +1,18 @@
+actor LivingBarrel : ExplosiveBarrel replaces ExplosiveBarrel {
+  speed 1
+  painchance 0
+  attacksound "chainguy/sight"
+  MONSTER
+  +LOOKALLAROUND
+  states {
+    Spawn:
+      BAR1 AB 6 A_Look
+      loop
+    See:
+      BAR1 AABB 3 A_Chase
+      loop
+    Melee:
+      BAR1 A 1 A_Die
+      goto Death
+  }
+}
