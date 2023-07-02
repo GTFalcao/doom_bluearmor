@@ -3,10 +3,10 @@ actor Mordekaiser replaces Cyberdemon
 {
 	height 110
 	radius 40
-	scale .5
+	scale .55
 	mass 1000
 	health 4000
-	meleerange 200
+	meleerange 150
 	speed 16
 	maxtargetrange 3000
 	obituary "%o was shredded to pieces by Mordekaiser."
@@ -106,26 +106,26 @@ actor Mordekaiser replaces Cyberdemon
 			MORD B 2 A_PlaySound("morde/spellw",1)
 			MORD B 0 A_GiveInventory("MordeCounter4",1)
 			MORD B 0 A_CustomMissile("CreepingDeathCounter",64)
-			MORD B 0 A_CustomMissile("CreepingDeath1",56,-96,0,2)
-			MORD B 3 A_CustomMissile("CreepingDeath2",56,96,0,2)
-			MORD B 0 A_CustomMissile("CreepingDeath1",56,-96,0,2)
-			MORD B 3 A_CustomMissile("CreepingDeath2",56,96,0,2)
-			MORD B 0 A_CustomMissile("CreepingDeath1",56,-96,0,2)
-			MORD B 3 A_CustomMissile("CreepingDeath2",56,96,0,2)
-			MORD B 0 A_CustomMissile("CreepingDeath1",56,-96,0,2)
-			MORD B 3 A_CustomMissile("CreepingDeath2",56,96,0,2)
-			MORD B 0 A_CustomMissile("CreepingDeath1",56,-96,0,2)
-			MORD B 3 A_CustomMissile("CreepingDeath2",56,96,0,2)
-			MORD B 0 A_CustomMissile("CreepingDeath1",56,-96,0,2)
-			MORD B 3 A_CustomMissile("CreepingDeath2",56,96,0,2)
-			MORD B 0 A_CustomMissile("CreepingDeath1",56,-96,0,2)
-			MORD B 3 A_CustomMissile("CreepingDeath2",56,96,0,2)
-			MORD B 0 A_CustomMissile("CreepingDeath1",56,-96,0,2)
-			MORD B 3 A_CustomMissile("CreepingDeath2",56,96,0,2)
-			MORD B 0 A_CustomMissile("CreepingDeath1",56,-96,0,2)
-			MORD B 3 A_CustomMissile("CreepingDeath2",56,96,0,2)
-			MORD B 0 A_CustomMissile("CreepingDeath1",56,-96,0,2)
-			MORD B 3 A_CustomMissile("CreepingDeath2",56,96,0,2)
+			MORD B 0 A_CustomMissile("CreepingDeath1",48,-96,0,2)
+			MORD B 3 A_CustomMissile("CreepingDeath2",48,96,0,2)
+			MORD B 0 A_CustomMissile("CreepingDeath1",48,-96,0,2)
+			MORD B 3 A_CustomMissile("CreepingDeath2",48,96,0,2)
+			MORD B 0 A_CustomMissile("CreepingDeath1",48,-96,0,2)
+			MORD B 3 A_CustomMissile("CreepingDeath2",48,96,0,2)
+			MORD B 0 A_CustomMissile("CreepingDeath1",48,-96,0,2)
+			MORD B 3 A_CustomMissile("CreepingDeath2",48,96,0,2)
+			MORD B 0 A_CustomMissile("CreepingDeath1",48,-96,0,2)
+			MORD B 3 A_CustomMissile("CreepingDeath2",48,96,0,2)
+			MORD B 0 A_CustomMissile("CreepingDeath1",48,-96,0,2)
+			MORD B 3 A_CustomMissile("CreepingDeath2",48,96,0,2)
+			MORD B 0 A_CustomMissile("CreepingDeath1",48,-96,0,2)
+			MORD B 3 A_CustomMissile("CreepingDeath2",48,96,0,2)
+			MORD B 0 A_CustomMissile("CreepingDeath1",48,-96,0,2)
+			MORD B 3 A_CustomMissile("CreepingDeath2",48,96,0,2)
+			MORD B 0 A_CustomMissile("CreepingDeath1",48,-96,0,2)
+			MORD B 3 A_CustomMissile("CreepingDeath2",48,96,0,2)
+			MORD B 0 A_CustomMissile("CreepingDeath1",48,-96,0,2)
+			MORD B 3 A_CustomMissile("CreepingDeath2",48,96,0,2)
 			MORD B 30
 			goto See
 		SpellE:
@@ -147,8 +147,8 @@ actor Mordekaiser replaces Cyberdemon
 			MORD B 0 A_CustomMissile("SiphonOfDestruction1",0,0,18,2)
 			MORD B 0 A_CustomMissile("SiphonOfDestruction1",0,0,24,2)
 			MORD B 0 A_CustomMissile("SiphonOfDestruction1",0,0,30,2)
-			MORD B 0 A_CustomMissile("SiphonOfDestruction2",64,32,0)
-			MORD B 30 A_CustomMissile("SiphonOfDestruction2",64,0,0)
+			MORD B 0 A_CustomMissile("SiphonOfDestruction2",56,32,0)
+			MORD B 30 A_CustomMissile("SiphonOfDestruction2",56,0,0)
 			goto See
 		SpellR:
 			MORD B 0 ACS_Execute(942,0)

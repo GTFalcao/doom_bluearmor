@@ -46,3 +46,104 @@ chainguy/sight            SURPRISE
 skeleton/sight            LEEROY
 $limit chainguy/sight 0
 $limit skeleton/sight 0
+
+morde/active1				act_1
+morde/active2				act_2
+morde/active3				act_3
+morde/active4				act_4
+morde/active5				act_5
+morde/active6				act_6
+morde/active7				act_7
+morde/active8				act_8
+morde/active9				act_9
+morde/active10				act_10
+morde/active11				act_11
+
+morde/deathvo1				deathvo1
+morde/deathvo2				deathvo2
+morde/death					death
+$random morde/deathvo 		{ morde/deathvo1 morde/deathvo2 }
+
+morde/sight					sight
+
+morde/spellw				w_start
+
+morde/meleetry1				atk_try1
+morde/meleetry2				atk_try2
+morde/meleetry3				atk_try3
+morde/meleehit1				atk_hit1
+morde/meleehit2				atk_hit2
+morde/meleehit3				atk_hit3
+$random morde/meleetry 		{ morde/meleetry1 morde/meleetry2 morde/meleetry3 }
+$random morde/meleehit 		{ morde/meleehit1 morde/meleehit2 morde/meleehit3 }
+
+morde/spellevo1				e_vo1
+morde/spellevo2				e_vo2
+morde/spellevo3				e_vo3
+morde/spellecast1			e_cast1
+morde/spellecast2			e_cast2
+morde/spellecast3			e_cast3
+morde/spellehit1			e_hit1
+morde/spellehit2			e_hit2
+morde/spellehit3			e_hit3
+$random morde/spellevo 		{ morde/spellevo1 morde/spellevo2 morde/spellevo3 }
+$random morde/spellecast 	{ morde/spellecast1 morde/spellecast2 morde/spellecast3 }
+$random morde/spellehit 	{ morde/spellehit1 morde/spellehit2 morde/spellehit3 }
+$limit morde/spellehit 		3
+$limit morde/spellehit1 	3
+$limit morde/spellehit2 	3
+$limit morde/spellehit3 	3
+
+morde/spellq1				q_hit1
+morde/spellq2				q_hit2
+morde/spellq3				q_hit3
+morde/spellqvo1				q_vo1
+morde/spellqvo2				q_vo2
+morde/spellqvo3				q_vo3
+$random morde/spellq 		{ morde/spellq1 morde/spellq2 morde/spellq3 }
+$random morde/spellqvo		{ morde/spellqvo1 morde/spellqvo2 morde/spellqvo3 }
+
+morde/rpop1					r_pop1
+morde/rpop2					r_pop2
+morde/rvo1					r_vo1
+morde/rvo2					r_vo2
+morde/rvo3					r_vo3
+morde/rvo4					r_vo4
+morde/rdrain				r_drain
+morde/rstart1				r_start1
+morde/rstart2				r_start2
+morde/rstart3				r_start3
+$random morde/rpop			{ morde/rpop1 morde/rpop2 }
+$random morde/rvo			{ morde/rvo1 morde/rvo2 morde/rvo3 morde/rvo4 }
+$random morde/rstart		{ morde/rstart1 morde/rstart2 morde/rstart3 }
+
+$rolloff					morde/spellevo1			1500		3000
+$rolloff					morde/spellevo2			1500		3000
+$rolloff					morde/spellevo3			1500		3000
+$rolloff					morde/spellevo			1500		3000
+$rolloff					morde/rstart1			1500		3000
+$rolloff					morde/rstart2			1500		3000
+$rolloff					morde/rstart3			1500		3000
+$rolloff					morde/rstart			1500		3000
+$rolloff					morde/rdrain			1500		3000
+$rolloff					morde/spellecast1		1500		3000
+$rolloff					morde/spellecast2		1500		3000
+$rolloff					morde/spellecast3		1500		3000
+$rolloff					morde/spellecast		1500		3000
+$rolloff					morde/spellw			1500		3000
+$rolloff					morde/meleetry1			1500		3000
+$rolloff					morde/meleetry2			1500		3000
+$rolloff					morde/meleetry3			1500		3000
+$rolloff					morde/meleetry			1500		3000
+$rolloff					morde/meleehit1			1500		3000
+$rolloff					morde/meleehit2			1500		3000
+$rolloff					morde/meleehit3			1500		3000
+$rolloff					morde/meleehit			1500		3000
+$rolloff					morde/spellqvo1			1500		3000
+$rolloff					morde/spellqvo2			1500		3000
+$rolloff					morde/spellqvo3			1500		3000
+$rolloff					morde/spellqvo			1500		3000
+$rolloff					morde/spellq1			1500		3000
+$rolloff					morde/spellq2			1500		3000
+$rolloff					morde/spellq3			1500		3000
+$rolloff					morde/spellq			1500		3000
