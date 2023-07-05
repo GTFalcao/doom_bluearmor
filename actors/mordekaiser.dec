@@ -385,7 +385,7 @@ actor SiphonOfDestruction1
 	speed 50
 	radius 12
 	height 64
-	damage (random(13,21))
+	damage (random(13,23))
 	deathsound "morde/spellehit"
 	damagetype "metal"
 	PROJECTILE

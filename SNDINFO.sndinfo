@@ -48,6 +48,7 @@ nuke/boom                 NUKE
 $limit nuke/boom 0
 $limit chainguy/sight 0
 $limit skeleton/sight 0
+$rolloff nuke/boom 500 2000
 
 morde/active1				act_1
 morde/active2				act_2
