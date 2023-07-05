@@ -10,7 +10,7 @@ actor Armorvile : Archvile replaces Archvile {
       VILE DDEEFF 2 A_VileChase
       loop
     Heal:
-      VILE "[[^^]]" 5 bright A_SpawnItemEx("BlueArmorBonus", random(30, 40), random(-20, 20), 30)
+      AVIL AABBCC 5 bright A_SpawnItemEx("BlueArmorBonus", random(30, 40), random(-20, 20), 30)
       Goto See
     Pain:
 		  VILE Q 2
