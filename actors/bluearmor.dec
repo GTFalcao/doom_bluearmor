@@ -7,7 +7,7 @@ actor BlueArmorMonster : LostSoul replaces LostSoul {
   speed 6
 	painchance 170
   damage (random(10, 20))
-  minmissilechance 300
+  minmissilechance 400
 	obituary "%o couldn't pick up a Blue Armor."
   bloodtype "BlueArmorChunkSmall"
   seesound "bluearmor/sight"

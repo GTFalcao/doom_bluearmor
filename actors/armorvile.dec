@@ -1,10 +1,10 @@
 actor Armorvile : Archvile replaces Archvile {
-  // spawn pickable blue armors instead of fire
-  // damage ignores armor
   health 900
+  speed 10
+	obituary "%o was incinerated by an Armorvile."
   states {
     Heal:
-      VILE "[\]" 5 bright A_SpawnItemEx("BlueArmorBonus", random(30, 40), random(-20, 20), 30)
+      VILE "[[\\]]" 5 bright A_SpawnItemEx("BlueArmorBonus", random(30, 40), random(-20, 20), 30)
       Goto See
     Pain:
 		  VILE Q 2
@@ -16,7 +16,7 @@ actor Armorvile : Archvile replaces Archvile {
       VILE G 10 Bright A_FaceTarget
       VILE H 8 Bright A_VileTarget
       VILE IJKLMN 8 Bright A_FaceTarget
-      VILE O 8 Bright A_VileAttack("vile/stop", 20, 75, 75, 3.0)
+      VILE O 8 Bright A_VileAttack("vile/stop", 5, 90, 75, 3.0)
       VILE P 20 Bright
       Goto See
     Death:
@@ -73,6 +73,7 @@ actor BlueArmorBonus : BasicArmorBonus
   Inventory.PickupMessage "Picked up a mini blue armor."
   Inventory.Icon "ARM2A0"
   Armor.SavePercent 50
+  Armor.MaxSaveAmount 200
   Armor.SaveAmount 3
   States
   {

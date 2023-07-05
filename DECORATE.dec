@@ -1,3 +1,4 @@
+#include "actors/armorvile.dec"
 #include "actors/barrel.dec"
 #include "actors/bluearmor.dec"
 #include "actors/bluearmorcore.dec"
