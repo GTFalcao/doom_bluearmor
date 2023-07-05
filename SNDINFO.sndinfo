@@ -44,6 +44,8 @@ $limit johncena/hit 0
 
 chainguy/sight            SURPRISE
 skeleton/sight            LEEROY
+nuke/boom                 NUKE
+$limit nuke/boom 0
 $limit chainguy/sight 0
 $limit skeleton/sight 0
 
